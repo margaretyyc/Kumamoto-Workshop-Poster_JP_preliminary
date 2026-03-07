@@ -24,13 +24,14 @@
         }
         @keyframes heart-beat {
             0% { transform: scale(1); }
-            10% { transform: scale(1.03); }
+            10% { transform: scale(1.05); }
             20% { transform: scale(1); }
-            30% { transform: scale(1.02); }
+            30% { transform: scale(1.03); }
             40% { transform: scale(1); }
         }
         .beat-heavy {
             animation: heart-beat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            display: inline-block;
         }
         .bar {
             width: 5px;
@@ -57,104 +58,24 @@
 
     <div class="relative z-10 w-full max-w-2xl bg-white rounded-[2rem] sm:rounded-[3rem] overflow-hidden flex flex-col border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
         
-        <div class="vibrant-gradient p-8 sm:p-14 text-white relative overflow-hidden border-b-4 border-black">
+        <div class="vibrant-gradient p-8 sm:p-14 text-white relative overflow-hidden border-b-4 border-black text-center sm:text-left">
             <div class="relative z-10">
-                <div class="flex items-center space-x-2 mb-6">
+                <div class="flex items-center justify-center sm:justify-start space-x-2 mb-6">
                     <div class="bar" style="animation-delay: 0.1s"></div>
                     <div class="bar" style="animation-delay: 0.3s"></div>
                     <div class="bar" style="animation-delay: 0.5s"></div>
                     <div class="bar" style="animation-delay: 0.2s"></div>
-                    <span class="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] bg-black/30 px-3 py-1 rounded">Beat Beyond Words</span>
+                    <span class="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] bg-black/30 px-3 py-1 rounded">Beat Beyond Words</span>
                 </div>
                 
-                <div class="mb-4 space-y-1">
-                    <p class="text-lg sm:text-xl font-black tracking-tight drop-shadow-md">言葉より、早くつながる。</p>
-                    <p class="text-base sm:text-lg font-bold opacity-90">跨越語言，用節奏交朋友。</p>
+                <div class="mb-6 space-y-2">
+                    <p class="text-xl sm:text-2xl font-black tracking-tight drop-shadow-md">言葉より、早くつながる。</p>
+                    <p class="text-xl sm:text-2xl font-[900] text-yellow-300 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">跨越語言，用節奏交朋友。</p>
                 </div>
                 
-                <h1 class="text-4xl sm:text-7xl font-black leading-none mb-8 tracking-tighter beat-heavy drop-shadow-[5px_5px_0px_rgba(0,0,0,0.4)]">
+                <h1 class="text-5xl sm:text-8xl font-[900] leading-tight mb-8 tracking-tighter beat-heavy drop-shadow-[5px_5px_0px_rgba(0,0,0,0.4)]">
                     ドンドコ、熊本。
                 </h1>
                 
-                <div class="flex items-center space-x-4">
-                    <span class="text-3xl sm:text-4xl animate-bounce">🥁</span>
-                    <p class="text-xl sm:text-2xl font-black italic bg-white/20 backdrop-blur-sm px-4 py-1 rounded-lg border border-white/30">リズムで、つながる。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-6 sm:p-12 bg-white flex-grow relative">
-            <div class="max-w-lg mx-auto space-y-12">
-                
-                <div class="space-y-10">
-                    <div class="flex flex-col items-start space-y-3">
-                        <div class="inline-block bg-yellow-400 border-2 border-black px-4 py-1 transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <p class="text-lg font-black text-black">コトバはいらない。</p>
-                        </div>
-                        <p class="text-lg font-black text-slate-900 leading-snug">
-                            隣の人と、リズムでつながる。<br>
-                            ただ一緒に、太鼓を叩いてみる。<br>
-                            そこで生まれる、不思議な時間。<br>
-                            熊本で、新しいつながりを。
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col items-end space-y-3 text-right">
-                        <div class="inline-block bg-yellow-400 border-2 border-black px-4 py-1 transform rotate-1 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <p class="text-lg font-black text-black">不用再怕日文不夠好。</p>
-                        </div>
-                        <p class="text-lg font-black text-slate-900 leading-snug">
-                            只要跟著節奏敲動，<br>
-                            就能與在地人交朋友。<br>
-                            享受這段奇妙時光，<br>
-                            在熊本遇見新的連結。
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-yellow-400 border-4 border-black p-4 sm:p-6 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center transform hover:scale-[1.02] transition-transform">
-                    <div class="flex flex-col space-y-2 text-xl sm:text-2xl font-black text-black tracking-tighter">
-                        <div>1時間ミニセッション / 1小時迷你工作坊</div>
-                        <div>5月中旬 | 熊本市内</div>
-                        <div class="text-red-600">参加無料 / 免費參加</div>
-                    </div>
-                </div>
-
-                <div class="bg-teal-400 border-4 border-black p-4 sm:p-5 rounded-2xl flex flex-col items-center justify-center space-y-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] animate-pulse">
-                    <div class="flex items-center space-x-3 text-center">
-                        <span class="text-2xl">🎁</span>
-                        <span class="text-lg sm:text-xl font-black text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">【台湾×熊本】交流のサプライズ！</span>
-                    </div>
-                    <p class="text-sm font-bold text-white/90">準備了【台灣x熊本】的驚喜小禮！</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-black p-8 sm:p-10 pb-12 flex flex-col items-center">
-            <div class="text-white font-black text-center mb-8 space-y-2">
-                <p class="text-lg sm:text-xl tracking-widest">気になった方は、まずは登録！</p>
-                <p class="text-lg sm:text-xl tracking-widest text-yellow-400">有興趣的朋友，請先登記！</p>
-                <p class="text-[10px] sm:text-xs font-bold opacity-70 pt-2">※開催が確定次第、詳細を優先的にご案内します。</p>
-            </div>
-
-            <a id="registration-link" href="#" target="_blank" class="clickable-qr bg-white p-4 sm:p-6 rounded-2xl flex items-center space-x-4 sm:space-x-8 max-w-sm w-full border-4 border-yellow-400 shadow-[0_0_20px_rgba(255,222,0,0.3)] hover:bg-yellow-50">
-                <div class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-inner">
-                    <img id="qr-image" src="" alt="QR Code" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-col text-left">
-                    <span class="font-black text-base sm:text-lg text-black leading-tight">先行案内・興味あり登録</span>
-                    <span class="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest mt-2 italic">點擊填寫預約表單</span>
-                    <div class="mt-2 bg-teal-500 text-white text-[10px] px-2 py-1 rounded-full text-center font-bold uppercase">Click to Join</div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <script>
-        const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfL-ZtE8JiEy1RkXCkhuHbMBcGajDhIil0Bes4FdTb-W3jRcQ/viewform?hl=ja"; 
-        
-        document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(registrationUrl)}`;
-        document.getElementById('registration-link').href = registrationUrl;
-    </script>
-</body>
-</html>
+                <div class="flex items-center justify-center sm:justify-start space-x-4">
+                    <span class="text-3xl sm:text-
