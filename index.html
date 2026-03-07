@@ -13,14 +13,24 @@
         .taiko-bounce { animation: bounce-gentle 1.8s infinite ease-in-out; }
         .gift-pulse { animation: pulse-custom 2.5s infinite; }
         @keyframes pulse-custom { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
-        /* 防止手機端文字溢出 */
         .smart-break { word-break: keep-all; overflow-wrap: break-word; }
+        
+        /* Audio Bar Movement */
+        .bar { width: 4px; background: white; border-radius: 2px; animation: bar-dance 0.8s infinite ease-in-out; }
+        @keyframes bar-dance { 0%, 100% { height: 8px; } 50% { height: 24px; } }
     </style>
 </head>
 <body class="min-h-screen flex items-start sm:items-center justify-center p-2 sm:p-8">
-    <div class="relative w-full max-w-2xl bg-white rounded-[1.5rem] sm:rounded-[3rem] overflow-hidden flex flex-col border-[3px] sm:border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+    <div class="relative w-full max-w-2xl bg-white rounded-[1.5rem] sm:rounded-[3rem] overflow-hidden flex flex-col border-[3px] sm:border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
         
         <div class="vibrant-gradient p-6 sm:p-14 text-white relative border-b-[3px] sm:border-b-4 border-black text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start space-x-2 mb-4">
+                <div class="bar" style="animation-delay: 0.1s"></div>
+                <div class="bar" style="animation-delay: 0.3s"></div>
+                <div class="bar" style="animation-delay: 0.5s"></div>
+                <span class="text-[10px] font-black uppercase tracking-[0.2em] bg-black/30 px-3 py-1 rounded">Beat Beyond Words</span>
+            </div>
+
             <div class="mb-4 sm:mb-6 space-y-1">
                 <p class="text-lg sm:text-2xl font-black tracking-tight drop-shadow-md">言葉より、早くつながる。</p>
                 <p class="text-lg sm:text-2xl font-[900] text-yellow-300 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">跨越語言，用擊鼓交朋友。</p>
@@ -47,41 +57,35 @@
         </div>
 
         <div class="p-5 sm:p-12 bg-white flex-grow">
-            <div class="max-w-lg mx-auto space-y-10 sm:space-y-14">
-                
+            <div class="max-w-lg mx-auto space-y-10">
                 <div class="space-y-10">
                     <div class="flex flex-col items-start space-y-2">
-                        <div class="bg-yellow-400 border-2 border-black px-3 py-0.5 transform -rotate-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                            <p class="text-base sm:text-lg font-black">コトバはいらない。</p>
-                        </div>
+                        <div class="bg-yellow-400 border-2 border-black px-3 py-0.5 transform -rotate-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] font-black text-base sm:text-lg">コトバはいらない。</div>
                         <p class="text-base sm:text-xl font-black text-slate-900 leading-relaxed smart-break">
                             隣の人と、リズムでつながる。<br>
                             ただ一緒に、太鼓を叩いてみる。<br>
                             そこで生まれる、不思議な時間。<br>
-                            <span class="text-red-600">熊本で、新しいつながりを。</span>
+                            熊本で、新しいつながりを。
                         </p>
                     </div>
 
                     <div class="flex flex-col items-end text-right space-y-2">
-                        <div class="bg-yellow-400 border-2 border-black px-3 py-0.5 transform rotate-2 shadow-[-3px_3px_0px_0px_rgba(0,0,0,1)]">
-                            <p class="text-base sm:text-lg font-black">不用再怕日文不夠好。</p>
-                        </div>
+                        <div class="bg-yellow-400 border-2 border-black px-3 py-0.5 transform rotate-2 shadow-[-3px_3px_0px_0px_rgba(0,0,0,1)] font-black text-base sm:text-lg">擔心日文不夠好？</div>
                         <p class="text-base sm:text-xl font-black text-slate-900 leading-relaxed smart-break">
                             只要拿起鼓棒跟著敲動，<br>
                             就能與在地人交朋友。<br>
                             享受這段奇妙時光，<br>
-                            <span class="text-red-600">在熊本，遇見新的連結。</span>
+                            在熊本，遇見新的連結。
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-yellow-400 border-[3px] sm:border-4 border-black p-5 sm:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center">
-                    <div class="flex flex-col space-y-2 sm:space-y-4 font-[900] text-black tracking-tighter">
-                        <div class="text-lg sm:text-2xl border-b-2 border-black/10 pb-2">1時間ミニセッション</div>
-                        <div class="text-lg sm:text-2xl border-b-2 border-black/10 pb-2">5月中旬 | 熊本市内</div>
+                <div class="bg-yellow-400 border-[3px] border-black p-5 sm:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center">
+                    <div class="flex flex-col space-y-2 font-[900] text-black">
+                        <div class="text-lg sm:text-2xl border-b-2 border-black/10 pb-2">1時間ミニセッション | 5月中旬 | 熊本市内</div>
                         <div class="pt-2">
-                            <span class="text-red-600 text-sm sm:text-lg font-black block">初心者OK</span>
-                            <div class="text-red-600 text-4xl sm:text-6xl font-[900]">参加無料</div>
+                            <span class="text-600 text-sm sm:text-lg block">初心者歓迎！</span>
+                            <div class="text-red-600 text-4xl sm:text-6xl tracking-tighter">参加無料</div>
                         </div>
                     </div>
                 </div>
@@ -97,25 +101,25 @@
         </div>
 
         <div class="bg-black p-6 sm:p-10 flex flex-col items-center">
-            <a id="registration-link" href="#" target="_blank" class="bg-white p-4 sm:p-5 rounded-2xl flex items-center space-x-4 sm:space-x-6 w-full max-w-sm border-[3px] border-yellow-400 active:scale-95 transition-transform">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 border border-gray-100 rounded-lg overflow-hidden">
-                    <img id="qr-image" src="" alt="QR" class="w-full h-full">
+            <a id="registration-link" href="#" target="_blank" class="bg-white p-5 rounded-[2rem] flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 w-full max-w-md border-[4px] border-yellow-400 hover:bg-yellow-50 active:scale-95 transition-all">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 bg-white p-1 rounded-xl overflow-hidden border-2 border-black/5">
+                    <img id="qr-image" src="" alt="QR" class="w-full h-full object-contain">
                 </div>
-                <div class="flex flex-col text-left text-black">
-                    <span class="font-[900] text-sm sm:text-base leading-tight">先行案内・登録報名</span>
-                    <span class="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase mt-1 italic">點擊填寫預約表單</span>
-                    <div class="mt-2 bg-teal-500 text-white text-[10px] px-3 py-1 rounded-full text-center font-bold">CLICK HERE</div>
+                
+                <div class="flex flex-col text-center sm:text-left">
+                    <span class="font-[900] text-xl sm:text-2xl leading-tight text-red-600 tracking-tight">先行案内・登録報名</span>
+                    <span class="text-[11px] sm:text-xs font-black text-slate-500 uppercase mt-2 italic">點擊填寫預約表單</span>
+                    <div class="mt-3 bg-black text-yellow-400 text-xs px-4 py-1.5 rounded-full text-center font-black tracking-widest uppercase">Register Now</div>
                 </div>
             </a>
-            <p class="text-white/40 text-[9px] mt-4 uppercase tracking-widest font-bold">※開催確定後、詳細をご案内します</p>
+            <p class="text-white/40 text-[10px] mt-6 uppercase tracking-[0.2em] font-bold">※開催確定後、詳細をご案内します</p>
         </div>
     </div>
 
     <script>
         const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfL-ZtE8JiEy1RkXCkhuHbMBcGajDhIil0Bes4FdTb-W3jRcQ/viewform?hl=ja";
-        document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(registrationUrl)}`;
+        document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(registrationUrl)}`;
         document.getElementById('registration-link').href = registrationUrl;
     </script>
 </body>
 </html>
-
