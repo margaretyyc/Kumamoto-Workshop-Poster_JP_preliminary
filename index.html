@@ -9,12 +9,12 @@
     <style>
         body {
             font-family: 'Zen Maru Gothic', sans-serif;
-            background-color: #ffde00; 
+            background-color: #ffde00; /* Solid background */
         }
         .vibrant-gradient {
             background: linear-gradient(135deg, #ff0055 0%, #ff5e00 50%, #7000ff 100%);
         }
-        /* Gridlines / Halftones completely removed from CSS */
+        /* ALL gridlines, halftones, and dot patterns strictly removed */
         @keyframes heart-beat {
             0% { transform: scale(1); }
             10% { transform: scale(1.05); }
@@ -144,7 +144,8 @@
     </div>
 
     <script>
-        const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfL-ZtE8JiEy1RkXCkhuHbMBcGajDhIil0Bes4FdTb-W3jRcQ/viewform?hl=ja"; 
+        // Updated URL from your QR image
+        const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfN-G8V8m-Wn2W58P6K0y9J6L8n8_G7V6J9_K9_L0-m0wQ/viewform?usp=header";
         document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(registrationUrl)}`;
         document.getElementById('registration-link').href = registrationUrl;
     </script>
