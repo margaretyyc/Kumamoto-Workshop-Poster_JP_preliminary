@@ -9,105 +9,39 @@
     <style>
         body { font-family: 'Zen Maru Gothic', sans-serif; background-color: #ffde00; }
         .vibrant-gradient { background: linear-gradient(135deg, #ff0055 0%, #ff5e00 50%, #7000ff 100%); }
-        
-        @keyframes heart-beat {
-            0%, 100% { transform: scale(1); }
-            15% { transform: scale(1.08); }
-        }
+        @keyframes heart-beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.05); } }
         .beat-heavy { animation: heart-beat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1); display: inline-block; }
-
-        /* Traditional Wadaiko CSS */
-        .taiko-container {
-            position: relative;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.25));
-        }
-        .taiko-body {
-            width: 54px;
-            height: 44px;
-            background: #b91c1c; /* Deep Red */
-            border: 3px solid #000;
-            border-radius: 8px;
-            position: relative;
-            z-index: 2;
-        }
-        .taiko-head {
-            width: 54px;
-            height: 16px;
-            background: #fff;
-            border: 3px solid #000;
-            border-radius: 50%;
-            position: absolute;
-            top: -10px;
-            left: -3px;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        /* Tomoe symbol simplified */
-        .taiko-head::after {
-            content: "🌀";
-            font-size: 8px;
-            opacity: 0.6;
-        }
-        .bachi {
-            width: 4px;
-            height: 32px;
-            background: #fbbf24; /* Wood color */
-            border: 1.5px solid #000;
-            position: absolute;
-            z-index: 4;
-            border-radius: 1px;
-        }
-        .bachi-left { transform: rotate(-35deg); top: 8px; left: 6px; }
-        .bachi-right { transform: rotate(35deg); top: 8px; right: 6px; }
-
-        .bar { width: 5px; background: white; border-radius: 2px; animation: bar-dance 0.8s infinite ease-in-out; }
-        @keyframes bar-dance { 0%, 100% { height: 8px; } 50% { height: 28px; } }
+        .taiko-container { position: relative; width: 90px; height: 70px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.2)); }
+        .taiko-body { width: 70px; height: 45px; background: #a51c1c; border: 3px solid #000; border-radius: 40% / 10%; position: relative; z-index: 2; }
+        .taiko-body::before { content: "• • • • •"; position: absolute; top: -2px; left: 50%; transform: translateX(-50%); color: #fbbf24; font-size: 8px; letter-spacing: 4px; z-index: 5; }
+        .taiko-head { width: 70px; height: 18px; background: #f3f4f6; border: 3px solid #000; border-radius: 50%; position: absolute; top: -10px; left: -3px; z-index: 3; }
+        .bachi { width: 5px; height: 35px; background: #fef3c7; border: 2px solid #000; position: absolute; z-index: 4; border-radius: 2px; }
+        .bachi-left { transform: rotate(-40deg); top: 5px; left: 0px; }
+        .bachi-right { transform: rotate(40deg); top: 5px; right: 0px; }
         .smart-break { word-break: keep-all; overflow-wrap: break-word; }
         .clickable-qr { transition: all 0.2s; cursor: pointer; text-decoration: none !important; }
         .clickable-qr:active { transform: scale(0.95); }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-3 sm:p-8">
-    
     <div class="relative z-10 w-full max-w-2xl bg-white rounded-[2rem] sm:rounded-[3rem] overflow-hidden flex flex-col border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-        
         <div class="vibrant-gradient p-8 sm:p-14 text-white relative border-b-4 border-black text-center sm:text-left">
-            <div class="relative z-10">
-                <div class="flex items-center justify-center sm:justify-start space-x-2 mb-6">
-                    <div class="bar" style="animation-delay: 0.1s"></div>
-                    <div class="bar" style="animation-delay: 0.3s"></div>
-                    <div class="bar" style="animation-delay: 0.5s"></div>
-                    <span class="text-[10px] font-black uppercase tracking-[0.2em] bg-black/30 px-3 py-1 rounded">Beat Beyond Words</span>
+            <div class="mb-6 space-y-1">
+                <p class="text-xl sm:text-2xl font-black tracking-tight drop-shadow-md">言葉より、早くつながる。</p>
+                <p class="text-xl sm:text-2xl font-[900] text-yellow-300 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">跨越語言，用擊鼓交朋友。</p>
+            </div>
+            <h1 class="text-[10.5vw] sm:text-8xl font-[900] leading-tight mb-8 tracking-tighter beat-heavy drop-shadow-[4px_4px_0px_rgba(0,0,0,0.4)] smart-break">ドンドコ、熊本。</h1>
+            <div class="flex items-center justify-center sm:justify-start space-x-6">
+                <div class="taiko-container animate-bounce">
+                    <div class="taiko-body"><div class="taiko-head"></div></div>
+                    <div class="bachi bachi-left"></div>
+                    <div class="bachi bachi-right"></div>
                 </div>
-                
-                <div class="mb-6 space-y-1">
-                    <p class="text-xl sm:text-2xl font-black tracking-tight drop-shadow-md">言葉より、早くつながる。</p>
-                    <p class="text-xl sm:text-2xl font-[900] text-yellow-300 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">跨越語言，用節奏交朋友。</p>
-                </div>
-                
-                <h1 class="text-[10.5vw] sm:text-8xl font-[900] leading-tight mb-8 tracking-tighter beat-heavy drop-shadow-[4px_4px_0px_rgba(0,0,0,0.4)] smart-break">
-                    ドンドコ、熊本。
-                </h1>
-                
-                <div class="flex items-center justify-center sm:justify-start space-x-6">
-                    <div class="taiko-container animate-bounce">
-                        <div class="taiko-body"><div class="taiko-head"></div></div>
-                        <div class="bachi bachi-left"></div>
-                        <div class="bachi bachi-right"></div>
-                    </div>
-                    <p class="text-xl sm:text-2xl font-black italic bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 shadow-lg">太鼓で、つながる。</p>
-                </div>
+                <p class="text-xl sm:text-2xl font-black italic bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30 shadow-lg">太鼓で、つながる。</p>
             </div>
         </div>
 
-        <div class="p-6 sm:p-12 bg-white flex-grow">
+        <div class="p-6 sm:p-12 bg-white">
             <div class="max-w-lg mx-auto space-y-12">
                 <div class="space-y-12">
                     <div class="flex flex-col items-start space-y-3">
@@ -117,18 +51,19 @@
                         <p class="text-lg sm:text-xl font-black text-slate-900 leading-snug smart-break">
                             隣の人と、リズムでつながる。<br>
                             ただ一緒に、太鼓を叩いてみる。<br>
-                            そこで生まれる、不思議な時間。
+                            そこで生まれる、不思議な時間。<br>
+                            熊本で、新しいつながりを。
                         </p>
                     </div>
-
                     <div class="flex flex-col items-end text-right space-y-3">
                         <div class="inline-block bg-yellow-400 border-2 border-black px-4 py-1 transform rotate-2 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)]">
                             <p class="text-lg font-black text-black tracking-wider">不用再怕日文不夠好。</p>
                         </div>
                         <p class="text-lg sm:text-xl font-black text-slate-900 leading-snug smart-break">
-                            只要跟著節奏敲動，<br>
+                            只要拿起鼓棒跟著敲動，<br>
                             就能與在地人交朋友。<br>
-                            享受這段奇妙時光。
+                            享受這段奇妙時光，<br>
+                            在熊本，遇見新的連結。
                         </p>
                     </div>
                 </div>
@@ -137,26 +72,28 @@
                     <div class="flex flex-col space-y-3 text-xl sm:text-2xl font-[900] text-black tracking-tighter">
                         <div class="border-b-2 border-black/10 pb-2">1時間ミニセッション</div>
                         <div class="border-b-2 border-black/10 pb-2">5月中旬 | 熊本市内</div>
-                        <div class="text-red-600 text-2xl sm:text-3xl font-[900]">參加免費</div>
+                        <div class="pt-2 text-red-600">
+                            <span class="text-sm sm:text-base block mb-1 text-black/60 uppercase tracking-widest">初心者OK</span>
+                            <div class="text-4xl sm:text-6xl font-[900] leading-none tracking-tighter">参加無料</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="bg-black p-8 flex flex-col items-center">
-            <a id="registration-link" href="#" target="_blank" class="clickable-qr bg-white p-5 rounded-2xl flex items-center space-x-6 w-full max-w-sm border-4 border-yellow-400 shadow-[0_0_20px_rgba(255,222,0,0.3)]">
+            <a id="registration-link" href="#" target="_blank" class="clickable-qr bg-white p-5 rounded-2xl flex items-center space-x-6 w-full max-w-sm border-4 border-yellow-400">
                 <div class="w-20 h-20 shrink-0 border border-gray-100 rounded-lg overflow-hidden">
                     <img id="qr-image" src="" alt="QR" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col text-left text-black">
                     <span class="font-[900] text-base leading-tight">先行案内・登録報名</span>
-                    <span class="text-[10px] font-black text-slate-400 uppercase mt-1">點擊填寫預約表單</span>
+                    <span class="text-[10px] font-black text-slate-400 uppercase mt-1 italic">點擊填寫預約表單</span>
                     <div class="mt-2 bg-teal-500 text-white text-[10px] px-3 py-1 rounded-full text-center font-bold">JOIN NOW</div>
                 </div>
             </a>
         </div>
     </div>
-
     <script>
         const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfL-ZtE8JiEy1RkXCkhuHbMBcGajDhIil0Bes4FdTb-W3jRcQ/viewform?hl=ja";
         document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(registrationUrl)}`;
