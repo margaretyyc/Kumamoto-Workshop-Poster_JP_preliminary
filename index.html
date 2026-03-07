@@ -10,10 +10,9 @@
         body { font-family: 'Zen Maru Gothic', sans-serif; background-color: #ffde00; -webkit-font-smoothing: antialiased; }
         .vibrant-gradient { background: linear-gradient(135deg, #ff0055 0%, #ff5e00 50%, #7000ff 100%); }
         
-        /* THE BEAT: Unified heartbeat animation */
         @keyframes heart-beat { 
             0%, 100% { transform: scale(1); } 
-            15% { transform: scale(1.08); } 
+            15% { transform: scale(1.1); } 
         }
         .beat-heavy { animation: heart-beat 1.1s infinite cubic-bezier(0.215, 0.61, 0.355, 1); display: inline-block; }
         
@@ -63,7 +62,7 @@
             <div class="max-w-lg mx-auto space-y-12">
                 <div class="space-y-12">
                     <div class="flex flex-col items-start space-y-3">
-                        <div class="bg-yellow-400 border-2 border-black px-6 py-2 transform -rotate-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-2xl">コトバはいらない</div>
+                        <div class="bg-yellow-400 border-2 border-black px-6 py-2 transform -rotate-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-1xl">コトバはいらない。</div>
                         <p class="text-lg sm:text-xl font-black text-black leading-relaxed smart-break">
                             隣の人と、リズムでつながる。<br>
                             ただ一緒に、太鼓を叩いてみる。<br>
@@ -73,7 +72,7 @@
                     </div>
 
                     <div class="flex flex-col items-end text-right space-y-3">
-                        <div class="bg-yellow-400 border-2 border-black px-6 py-2 transform rotate-2 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-2xl">不用再怕日文不夠好</div>
+                        <div class="bg-yellow-400 border-2 border-black px-6 py-2 transform rotate-2 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-1xl">不用再怕日文不夠好。</div>
                         <p class="text-lg sm:text-xl font-black text-black leading-relaxed smart-break">
                             只要拿起鼓棒跟著敲動，<br>
                             就能與在地人交朋友。<br>
@@ -89,32 +88,33 @@
                         <div class="text-3xl sm:text-4xl">5月中旬 | 熊本市内</div>
                         <div class="pt-4 border-t-2 border-black/10 mt-2">
                             <span class="text-red-600 text-lg sm:text-xl block mb-1">初心者歓迎！</span>
-                            <div class="text-red-600 text-3xl sm:text-4xl tracking-tighter">參加無料</div>
+                            <div class="text-red-600 text-5xl sm:text-7xl tracking-tighter">參加無料</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-[#8fd9d6] border-[3px] border-black p-7 rounded-2xl flex flex-col items-center justify-center shadow-[6px_6px_0px_0px_rgba(0,0,0,0.5)]">
                     <div class="flex items-center space-x-3 text-white">
-                       <span class="text-3xl">🎁</span>
-                        <span class="text-1xl sm:text-2xl font-black drop-shadow-[2px_2px_0px_rgba(0,0,0,0.4)] tracking-tight">【台湾×熊本】交流サプライズ！</span>
+                        <span class="text-3xl">🎁</span>
+                        <span class="text-2xl sm:text-3xl font-black drop-shadow-[2px_2px_0px_rgba(0,0,0,0.4)] tracking-tight">【台湾×熊本】交流サプライズ！</span>
                     </div>
+                    <p class="text-base font-black text-white drop-shadow-[1px_1px_0px_rgba(0,0,0,0.4)] mt-1 tracking-tight">【台灣×熊本】交流驚喜小禮！</p>
+                </div>
             </div>
         </div>
 
-        <div class="bg-black p-8 sm:p-14 flex flex-col items-center space-y-8">
-            <div class="text-center">
-                <p class="text-white text-2xl sm:text-3xl font-black mb-1">気になった方は、まずは登録！</p>
-                <p class="text-yellow-400 text-2xl sm:text-3xl font-black tracking-tight">有興趣的朋友，請先登記！</p>
+        <div class="bg-black p-10 sm:p-16 flex flex-col items-center">
+            <div class="text-center mb-10">
+                <p class="text-white text-base sm:text-lg font-black mb-2 opacity-90 italic">気になった方は、まずは登録！</p>
+                <p class="text-yellow-400 text-base sm:text-lg font-black tracking-tight">有興趣的朋友，請先登記！</p>
             </div>
 
-            <a id="registration-link" href="#" target="_blank" class="bg-white p-6 rounded-[2.5rem] flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-8 w-full max-w-md border-[4px] border-yellow-400 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,222,0,0.3)]">
+            <a id="registration-link" href="#" target="_blank" class="bg-white p-6 rounded-[2.5rem] flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-8 w-full max-w-md border-[4px] border-yellow-400 active:scale-95 transition-all shadow-[0_0_50px_rgba(255,222,0,0.3)]">
                 <div class="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white p-1 rounded-xl">
                     <img id="qr-image" src="" alt="QR" class="w-full h-full object-contain">
                 </div>
                 <div class="flex flex-col text-center sm:text-left">
-                    <span class="font-black text-1xl sm:text-2xl leading-tight text-red-600">先行案内・登録報名</span>
-                    <span class="text-xs font-black text-slate-500 mt-2 italic tracking-wider">點擊填寫預約表單</span>
+                    <span class="font-black text-2xl sm:text-3xl leading-tight text-red-600">先行案内・登録報名</span>
                     <div class="mt-4 bg-emerald-500 text-white text-base px-10 py-3 rounded-full text-center font-black tracking-widest shadow-lg beat-heavy">CLICK HERE</div>
                 </div>
             </a>
@@ -128,8 +128,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
