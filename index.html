@@ -105,9 +105,9 @@
                 </div>
 
                 <div class="bg-yellow-400 border-4 border-black p-4 sm:p-6 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center transform hover:scale-[1.02] transition-transform">
-                    <div class="flex flex-col space-y-1 sm:space-y-2 text-lg sm:text-2xl font-black text-black tracking-tighter">
+                    <div class="flex flex-col space-y-2 text-xl sm:text-2xl font-black text-black tracking-tighter">
                         <div>1時間ミニセッション</div>
-                        <div class="text-2xl sm:text-3xl">5月中旬</div>
+                        <div>5月中旬</div>
                         <div>熊本市内</div>
                     </div>
                     <p class="text-lg font-black text-red-600 mt-2">参加無料</p>
@@ -147,8 +147,7 @@
     </div>
 
     <script>
-        // Updated with the URL found in your uploaded QR code
-        const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfN-G8V8m-Wn2W58P6K0y9J6L8n8_G7V6J9_K9_L0-m0wQ/viewform?usp=header"; 
+        const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfL-ZtE8JiEy1RkXCkhuHbMBcGajDhIil0Bes4FdTb-W3jRcQ/viewform?hl=ja"; 
         
         document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(registrationUrl)}`;
         document.getElementById('registration-link').href = registrationUrl;
