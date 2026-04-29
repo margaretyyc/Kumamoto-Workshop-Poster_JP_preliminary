@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日台パーカッション交流会</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            background-color: #fffaf5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 650px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(211, 84, 0, 0.1);
+            border: 3px dashed #d35400; /* 點綴虛線更有節奏感 */
+        }
+        h1 { color: #d35400; text-align: center; font-size: 2.2rem; margin-top: 0; }
+        .tagline { text-align: center; font-weight: bold; margin-bottom: 35px; color: #e67e22; font-size: 1.2rem; }
+        
+        .intro-text {
+            background: #fff8f0;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            text-align: center;
+            border: 1px solid #ffe0cc;
+        }
+
+        .info-section { margin-bottom: 30px; }
+        .info-row { display: flex; margin-bottom: 12px; border-bottom: 1px solid #fdf2e9; padding-bottom: 10px; }
+        .label { font-weight: bold; color: #d35400; width: 100px; flex-shrink: 0; }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff0e6 0%, #ffdfcc 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .highlight-box h3 { margin-top: 0; color: #d35400; font-size: 1.3rem; }
+        
+        .btn {
+            display: block;
+            background: #d35400;
+            color: white !important;
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4);
+        }
+        .btn:hover { background: #e67e22; transform: scale(1.03); }
+        
+        .footer-text {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #444;
+            padding: 20px;
+        }
+        .note { color: #d35400; font-weight: bold; display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🥁 日台パーカッション交流会</h1>
+    <p class="tagline">〜リズムでつながる、心とはずむ〜</p>
+
+    <div class="intro-text">
+        リズムや身体のやりとりを通して、<br>
+        <strong>日本と台湾の仲間たちが</strong> 言葉を使わずに<br>
+        自然と打解けあえる（溶け合える）交流の場です！
+    </div>
+
+    <div class="info-section">
+        <div class="info-row"><span class="label">いつ？</span><div>5/22（金）～ 5/24（日）<br><small>※1回 約1時間（みんなの予定を合わせて調整します！）</small></div></div>
+        <div class="info-row"><span class="label">どこで？</span><div>熊本市国際交流会館</div></div>
+        <div class="info-row"><span class="label">だれでも！</span><div>音楽経験はゼロでOK。どなたでもお気軽に！</div></div>
+        <div class="info-row"><span class="label">参加費</span><div>無料（お財布にもやさしい！）</div></div>
+    </div>
+
+    <div class="highlight-box">
+        <h3>🎁 ワクワク特典</h3>
+        <p>・<strong>みんなに：</strong> 台湾と熊本にちなんだ可愛いプレゼント！</p>
+        <p>・<strong>3人以上で：</strong> お友達を誘って来たら<strong>温泉券</strong>をプレゼント！</p>
+    </div>
+
+    <a href="https://docs.google.com/forms/d/1qjmFrMdqVHYJHFMkKhnKv7Y_R_OKsKIfi24M-qOY3eo/viewform?edit_requested=true" class="btn">
+        遊びに行く時間を送る 🎵
+    </a>
+
+    <div class="footer-text">
+        言葉はなくても、<strong>異なる文化を持つ人たちと一緒に</strong><br>
+        音を鳴らすだけで、最高に心地よい共鳴が生まれます。<br>
+        <span class="note">※ベストなマッチングのために、行ける時間は多めに教えてね！</span>
+    </div>
+</div>
+
+</body>
+</html>
